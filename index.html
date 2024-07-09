@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mia pagina web</h1>
+    <h2>Sottotitolo</h2>
+    <p id="myp">Mio paragrafo</p>
+    <button id="myButton">Cambia testo del paragrafo</button>
+
+<section id="mySection"></section>
+
+
+    <div id="myDiv">
+        <form>
+          <input type="text">
+          <input type="password">
+          <input type="number"  min="1" max="100">
+          <input type="date"
+          <input type="submit">
+        </form>
+    </div>
+
+
+    <img height="100px" src="https://logodownload.org/wp-content/uploads/2016/10/html5-logo.png">
+    <a id="mya" href="http://www.repubblica.it">Mio link</a>
+
+    <script>
+        console.log(window.navigator);
+
+        if ("geolocation" in navigator) {
+            /* geolocation is available */
+            navigator.geolocation.getCurrentPosition(
+                function(position){
+                    console.log(position);
+                    console.log(position.coords.latitude);
+                    console.log(position.coords.longitude);
+                    var myS = document.getElementById("mySection");
+                    var myP = document.createElement("p");
+                    var myPText = document.createTextNode("Latitudine: " + position.coords.latitude + " Longitudine: " + position.coords.longitude);
+                    myP.appendChild(myPText);
+                    myS.appendChild(myP);
+
+                },
+                function(error){
+                    console.log(error);
+                    var myS = document.getElementById("mySection");
+                    var myP = document.createElement("p");
+                    var myPText = document.createTextNode("Errore: " + error.message);
+                    myP.appendChild(myPText);
+                    myS.appendChild(myP);
+                }
+            );
+
+
+            } else {
+            /* geolocation IS NOT available */
+            }
+
+        var counter = 0;
+        var myButton = document.getElementById("myButton");
+        myButton.addEventListener('click', function(){
+            var myIp = document.getElementById("myp");
+            myIp.innerText = "Nuovo testo";
+            console.log(myIp.style);
+            myIp.style.color = "red";
+            myIp.style.fontSize = "40px";
+            console.log(myIp.style.fontSize);
+
+            var newContent = document.createElement("div");
+            var newContentText = document.createTextNode("Nuovo contenuto text");   
+            newContent.appendChild(newContentText); 
+            var mySection = document.getElementById("mySection");
+            mySection.appendChild(newContent);
+
+        })
+
+        function walkTheDOM(startingNode, func){
+            func(startingNode);
+            var nextNode = startingNode.firstChild;
+            while(nextNode){
+                walkTheDOM(nextNode, func);
+                nextNode = nextNode.nextSibling;
+            }
+            
+        }
+
+        // setInterval(() => {
+        //     var myIp = document.getElementById("myp");
+        //     counter += 1;
+        //     myIp.innerText = counter;
+        // }, 1000);
+
+     //   walkTheDOM(document.body, function(node){
+     //       if(node.nodeType !== 3) {
+     //           console.log(node.nodeType + " " + node.nodeName);
+     //       }
+     //   });
+    // var myIp = document.getElementById("myp");
+    // myIp.innerText = "Nuovo testo";
+     //console.log(myIp.href);
+
+     //var body = document.body;
+     //var childnodes = body.childNodes;
+     // console.log(childnodes);    
+
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="120" height="120" id="myCanvas">
+        An alternative text describing what your canvas displays.
+    </canvas>
+    <script>
+        var x = 10;
+        var y = 10;
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "green";
+// Add a rectangle at (10, 10) with size 100x100 pixels
+        ctx.fillRect(x, y, 100, 100);
+        x +=10;
+        y +=10;
+        setInterval(() => {
+            console.log(this);
+            let ctx = canvas.getContext("2d");
+        ctx.fillStyle = "red";
+// Add a rectangle at (10, 10) with size 100x100 pixels
+        ctx.fillRect(this.x, this.y, 100, 100);
+        this.x +=10;
+        this.y +=10; 
+        }, 1000);
+    </script>
+</body>
+</html>
