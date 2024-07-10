@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color:red;
+        }
+        a:visited {
+            color:blue;
+        }
+        a:hover {
+            color:green;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        a.highlight:hover {
+            color:chocolate;
+        }
+
+        p {
+            display:none;
+            background-color: yellow;
+            padding: 20px;
+        }
+
+        article:hover p {
+            display:block;
+        }
+
+    </style>
+</head>
+<body>
+    <h3> Esempio di psuedo classes</h3>
+    <section>
+        <article>
+            <a class="highlight" href="http://www.repubblica.it" target="_blank">Mio link</a>
+        </article>
+
+         <article>
+            Prova il mouse hover
+            <p>Eccomi qua!</p>
+         </article>
+
+
+    </section>
+</body>
+</html>

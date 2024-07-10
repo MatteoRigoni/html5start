@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .box {
+        float:left;
+        width: 33.33%;
+        padding: 30px;
+      }
+
+      .box1 {
+        float:left;
+        width: 50%;
+        height: 300px;
+        padding: 30px;
+      }
+
+      .box2{
+        float:left;
+        width: 15%;
+        height: 300px;
+        padding: 30px;
+      }
+
+      .myclear::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="myclear">
+        <div class="box1" style="background-color:red; color: white">
+            <p> Testo della prima scatola</p>
+        </div>
+        <div class="box2" style="background-color:magenta; color: white">
+            <p> Testo della seconda scatola</p>
+        </div>
+        <div class="box2" style="background-color:blue; color: white">
+            <p> Testo della terza scatola</p>
+        </div>
+    </div>
+    <p>Altro contenuto</p>
+</body>
+</html>
