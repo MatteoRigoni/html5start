@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.relative {
+            position: relative;
+            width: 400px;
+            height: 1400px;
+            border: 3px solid #73AD21;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0px;
+            width: 200px;
+            height: 200px;
+            border: 3px solid red;
+        }
+
+        div.fixed {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid yellow;}
+
+    </style>
+</head>
+<body>
+    <h2>Position absolute</h2>
+    <p>Esempio di pisizionamente assoluto</p>
+    <div class="fixed">Questo elemento ha position fixed</div>
+
+
+    <div class="relative"> Questo eloemento ha position relative
+        <div class="absolute"> Questo elemento ha position absolute</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+            z-index: -1;
+            left: 0px;
+            top: 0px;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        .nera {
+            position:relative;
+            border: 2px solid black;
+            height: 100px;
+            margin: 30px;
+            z-index:1;
+        }
+
+        .grigia {
+            position: absolute;
+            background-color: lightgray;
+            height: 60px;
+            width: 70%;
+            top: 50px;
+            left:50px;
+            z-index: 3;
+        }
+
+        .verde {
+            background-color: lightgreen;
+            z-index: 2;
+            position: absolute;
+            height: 100px;
+            width: 35%;
+            left: 270px;
+            top: -15px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Esempio di z-index</h1>
+    <p>Esempio di testo</p>
+
+    <div class="container">
+        <div class="nera">Black box</div>
+        <div class="grigia">Gray box</div>
+        <div class="verde">Green box</div>
+
+    </div>
+
+</body>
+</html>

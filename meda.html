@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        .container {
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        #leftsidebar {
+          float: none;
+          width: auto;   
+        }
+
+        #menulist {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menuitem {
+            background-color: lightblue;
+            list-style-type: none;
+            border: 1px solid black;
+        }
+
+        @media screen and (min-width: 480px) {
+            body {
+                background-color: lightgreen;
+            }
+            #leftsidebar {
+                    float: left;
+                    width: 200px;
+            }
+            .menuitem {
+            background-color: lightgray;
+            list-style-type: none;
+            border: 1px solid black;
+        }
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+   <div class="container">
+      <div id="leftsidebar">
+        <ul id="menulist">
+            <li class="menuitem">Menu 1</li>
+            <li class="menuitem">Menu 2</li>
+            <li class="menuitem">Menu 3</li>
+            <li class="menuitem">Menu 4</li>
+        </ul>
+      </div>
+
+   </div>
+
+
+
+    <h1>Esempio di media query</h1>
+
+
+</body>
+</html>
