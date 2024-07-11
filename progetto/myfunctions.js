@@ -15,4 +15,6 @@ function sayHello(name){
     return `Hello ${name}`;
 }
 
-export {name, somma, sayHello, areaCerchio}; 
+const apiKey = "ee6b293d773f4fcd7e434f79bbc341f2";
+
+export {name, somma, sayHello, areaCerchio, apiKey}; 

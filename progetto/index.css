@@ -1,0 +1,19 @@
+#map { height: 180px; }
+#map1 { height: 180px; }
+
+.generic-map {
+    height: 180px;
+}
+
+#mapContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 250px 250px;    
+    padding: 10px;
+    gap: 50px 100px;
+}
+
+#containerWeather {
+    display: flex;
+    align-items: center;  
+}
